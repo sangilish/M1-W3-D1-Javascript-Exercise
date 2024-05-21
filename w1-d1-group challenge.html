@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Recipes</title>
+</head>
+<body>
+
+    <div id="recipeContainer"></div>
+
+    <script>
+        // Variable to hold the time of day
+        var timeOfDay = "Noon"; // Change this value to "Sunset" to test dinner recipe
+
+        // Recipes
+        var lunchRecipe = `
+            <h2>Lunch Recipe: Grilled Chicken Salad</h2>
+            <ol>
+                <li>Marinate the chicken breast with olive oil, lemon juice, salt, and pepper for at least 30 minutes.</li>
+                <li>Preheat the grill to medium-high heat.</li>
+                <li>Grill the chicken breast for 6-7 minutes on each side or until fully cooked.</li>
+                <li>Chop lettuce, tomatoes, cucumbers, and red onions, and mix them in a large bowl.</li>
+                <li>Slice the grilled chicken and place it on top of the salad. Drizzle with your favorite dressing and serve.</li>
+            </ol>
+        `;
+
+        var dinnerRecipe = `
+            <h2>Dinner Recipe: Spaghetti Bolognese</h2>
+            <ol>
+                <li>Heat a tablespoon of olive oil in a large pan over medium heat. Add chopped onions and garlic, and cook until softened.</li>
+                <li>Add ground beef to the pan, breaking it up with a spoon, and cook until browned.</li>
+                <li>Stir in a can of crushed tomatoes, a tablespoon of tomato paste, and your choice of herbs (basil, oregano, thyme).</li>
+                <li>Simmer the sauce for 20-30 minutes, stirring occasionally. Season with salt and pepper to taste.</li>
+                <li>Cook spaghetti according to package instructions. Serve the Bolognese sauce over the spaghetti and garnish with grated Parmesan cheese.</li>
+            </ol>
+        `;
+
+        // Decision making based on the time of day
+        document.getElementById('recipeContainer').innerHTML = (timeOfDay === "Noon") ? lunchRecipe : dinnerRecipe;
+    </script>
+
+</body>
+</html>
